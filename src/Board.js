@@ -9,7 +9,7 @@ function Board (props) {
 
   return (
     <div className="Board">
-      {props.task.filter(el => el.status === props.status).map(el => <NameTask taski={el} onChangeStatus={props.onChangeStatus}/>)}
+      {props.task.filter(el => el.status === props.status).map(el => <NameTask taski={el} onChangeStatus={props.onChangeStatus} key={el.id}/>)}
     </div>
   );
 }

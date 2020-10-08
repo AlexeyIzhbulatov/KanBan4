@@ -16,7 +16,7 @@ function NameTask (props) {
   return (
     <div className="nameTask">
       {props.taski.name}
-      <button onClick={() => props.onChangeStatus({id: props.taski.id, direction: left})}>{left}</button>
+      <button onClick={() => props.onChangeStatus({id: props.taski.id, direction: 'left'})}>{left}</button>
     </div>
   );
 }
