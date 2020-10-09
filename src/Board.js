@@ -14,7 +14,7 @@ function Board (props) {
                                                                                         key={el.id}
                                                                                         index={index}
                                                                                         onCreateTask={props.onCreateTask}
-                                                                                        badgePriority={props.badgePriority}
+                                                                                        // badgePriority={props.badgePriority}
       />)}
     </div>
   );

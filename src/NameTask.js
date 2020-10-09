@@ -28,6 +28,8 @@ function NameTask (props) {
 
     const badgeColor = ["badge badge-success", "badge badge-warning", "badge badge-danger"]
 
+    const levelPriority = ['Low', 'Medium', 'High']
+
 
   return (
     <div className="nameTask">
@@ -36,7 +38,7 @@ function NameTask (props) {
                 <h5 className="card-title">{props.taski.name}</h5>
                 <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <button type="button" className="btn btn-light" onClick={() => props.onChangeStatus({id: props.taski.id, direction: 'left', index: props.index})}>{left}</button>
-                <span>{dash}<span className={badgeColor[taski.priority]} onClick={() => props.badgePriority({id: props.taski.id, badge: 'badge'})}>{taski.priority}</span>{dash}</span>
+                <span>{dash}<span className={badgeColor[taski.priority]} onClick={() => props.onChangeStatus({id: props.taski.id, badge: 'badge'})}>{levelPriority[taski.priority]}</span>{dash}</span>
                 <button type="button" className="btn btn-light" onClick={() => props.onChangeStatus({id: props.taski.id, direction: 'right', index: props.index})}>{right}</button>
             </div>
         </div>
