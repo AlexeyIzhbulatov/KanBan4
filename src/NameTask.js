@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Modal from "./Modal";
 
 
 
@@ -40,6 +41,7 @@ function NameTask (props) {
                 <button type="button" className="btn btn-light" onClick={() => props.onChangeStatus({id: props.taski.id, direction: 'left', index: props.index})}>{left}</button>
                 <span>{dash}<span className={badgeColor[taski.priority]} onClick={() => props.onChangeStatus({id: props.taski.id, badge: 'badge'})}>{levelPriority[taski.priority]}</span>{dash}</span>
                 <button type="button" className="btn btn-light" onClick={() => props.onChangeStatus({id: props.taski.id, direction: 'right', index: props.index})}>{right}</button>
+                <Modal/>
             </div>
         </div>
     </div>
