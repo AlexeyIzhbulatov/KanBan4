@@ -8,15 +8,16 @@ function Board (props) {
 
 
   return (
-    <div className="Board">
-      {props.task.filter(el => el.status === props.status).map((el, index) => <NameTask taski={el}
-                                                                                        onChangeStatus={props.onChangeStatus}
-                                                                                        key={el.id}
-                                                                                        index={index}
-                                                                                        onCreateTask={props.onCreateTask}
-                                                                                        // badgePriority={props.badgePriority}
-      />)}
-    </div>
+      <div className="Board">
+          {
+              props.task.filter(el => el.status === props.status).map(el => <NameTask task={el}
+                                                                                      onChangeStatus={props.onChangeStatus}
+                                                                                      key={el.id}
+                                                                                      onChangePriority={props.onChangePriority}
+                                                                                      onCreateText={props.onCreateText}
+              />)
+          }
+      </div>
   );
 }
 
